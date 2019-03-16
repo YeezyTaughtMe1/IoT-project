@@ -8,11 +8,6 @@ image: maven:3.3.9
 pipelines:
   default:
     - step:
-        caches:
-          - maven
-        script: # Modify the commands below to build your repository.
-          - mvn -B verify # -B batch mode makes Maven less verbose
-    - step:
           name: Deploy to test
           deployment: test   # can be test, staging or production.
     # trigger: manual  # Uncomment to make this a manual deployment.
