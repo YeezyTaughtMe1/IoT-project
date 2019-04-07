@@ -1,1 +1,1 @@
-web: sh target/webapplication
+web: vendor/bin/heroku-php-apache2
