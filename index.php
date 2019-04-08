@@ -11,10 +11,10 @@
   <title>31261 - Project</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="31261WebApp/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="css/scrolling-nav.css" rel="stylesheet">
+  <link href="31261WebApp/css/scrolling-nav.css" rel="stylesheet">
 
 </head>
 
