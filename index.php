@@ -61,7 +61,7 @@
           
           <form method="post">
             <p>
-              <button class="button" name="LEDOn" value="LEDOn">ON</button>
+              <button class="button" name="onBtn" value="LEDOn">ON</button>
             </p>
           </form>
           <button class="button">OFF</button>
@@ -70,20 +70,12 @@
     </div>
   </section>
     <?php 
-      curl_setopt($ch, $url);
-      //execute post
-      $result = curl_exec($ch);
-      //close connection
-      curl_close($ch);
-      // set post fields
-$post = ['LEDOn' => 'LEDOn'];
-
-$ch = curl_init('https://dgnbmtfr.p72.rt3.io/index.php');
-curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
-curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-// close the connection, release resources used
-curl_close($ch);
-
+        $post = ['onBtn' => 'LEDOn'];
+        $ch = curl_init('http://58.173.226.157:8080/index.php');
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        // close the connection, release resources used
+        curl_close($ch);
     ?>
 
 
