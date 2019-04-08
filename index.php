@@ -77,9 +77,9 @@
           <p class="lead">This is the LED Light Sensor. You can control it using the ON/OFF buttons below.</p>
           
           <form method="post" action="index.php">
-            <p>
-              <button class="button" name="onBtn" value="LEDOn" type="submit">ON</button>
-            </p>
+              <input type="radio" name="status" value="on">Blink 4 times
+              <input type="radio" name="status" value="off">Turn off
+              <button class="button" name="lightbtn" value="run" type="submit">Run</button>
           </form>
           <button class="button">OFF</button>
         </div>
@@ -87,10 +87,11 @@
     </div>
   </section>
     <?php 
-        $post = ['onBtn' => 'LEDOn'];
+        $post = ['status' => 'on'];
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, 'http://58.173.226.157:8080/index.php');
         curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, 'on');
         $response = curl_exec($ch);
         // close the connection, release resources used
         curl_close($ch);
