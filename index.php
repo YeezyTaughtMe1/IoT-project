@@ -43,7 +43,7 @@
 */ ?>
 
 <?php
-        include ('Net/SSH2.php');
+        include('SSH2.php');
 
         $server = "58.173.226.157 -p 59972";
         $username = "pi";
