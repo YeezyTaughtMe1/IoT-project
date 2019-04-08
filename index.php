@@ -78,7 +78,7 @@
       // set post fields
 $post = ['LEDOn' => 'LEDOn'];
 
-$ch = curl_init('https://eycnfhqd.p72.rt3.io/');
+$ch = curl_init('https://dgnbmtfr.p72.rt3.io/');
 curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 // execute!
