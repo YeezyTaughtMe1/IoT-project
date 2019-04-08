@@ -18,7 +18,7 @@
 
 
 </head>
-<?php
+<?php /*
 
     include('Net/SSH2.php');
 
@@ -40,7 +40,7 @@
     {
       echo $ssh->exec($command);   
     }
-?>
+*/ ?>
 
 <body id="page-top">
 
