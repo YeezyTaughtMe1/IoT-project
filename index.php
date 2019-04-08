@@ -88,8 +88,10 @@
   </section>
     <?php 
         $post = ['onBtn' => 'LEDOn'];
-        $ch = curl_init('http://58.173.226.157:8080/index.php');
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, 'http://58.173.226.157:8080/index.php');
         curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+        $response = curl_exec($ch);
         // close the connection, release resources used
         curl_close($ch);
     ?>
