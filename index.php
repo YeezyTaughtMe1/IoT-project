@@ -48,11 +48,8 @@
         $username = "pi";
         $password = "networking";
         $command = "python ~/Documents/Project/blink4.py";
-
         $ssh = new Net_SSH2($server);
-        if (!$ssh->login($username, $password)) {
-            echo "Login Failed";
-        } ?>
+        $ssh->login($username, $password); ?>
 
 <body id="page-top">
 
@@ -86,7 +83,15 @@
       <p>Georges Bou Ghantos & Students</p>
     </div>
   </header>
-
+  <?php
+  if ($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['lightBtn'])) {
+            func();
+        }
+    function func() {
+          echo $ssh->exec($command);   
+          echo "works!";
+        }
+  ?> 
   <section id="LED">
     <div class="container">
       <div class="row">
@@ -97,16 +102,7 @@
           <form method="post" action="index.php">
               <button type="submit" class="button" name="lightbtn" value="run">Run</button>
               <button type="submit" class="button" name="offBtn" value="off">Do nothing</button>
-          </form>
-<?php
-  if ($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['lightBtn'])) {
-            func();
-        }
-    function func() {
-          echo $ssh->exec($command);   
-          echo "works!";
-        }
-?>          
+          </form>         
         </div>
       </div>
     </div>
