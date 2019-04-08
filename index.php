@@ -63,9 +63,9 @@
           <h2>LED Light Sensor</h2>
           <p class="lead">This is the LED Light Sensor. You can control it using the ON/OFF buttons below.</p>
           
-          <form method="post" action="">
+          <form method="post" action="$url">
             <p>
-              <button class="button" value="LEDOn">ON</button>
+              <button class="button" name="LEDOn" value="LEDOn">ON</button>
             </p>
           </form>
           <button class="button">OFF</button>
