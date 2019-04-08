@@ -107,6 +107,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['lightBtn']))
 function func()
 {
   echo $ssh->exec($command);   
+  echo "works!";
 }
 ?>          
         </div>
