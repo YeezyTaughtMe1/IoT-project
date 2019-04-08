@@ -78,11 +78,9 @@
       // set post fields
 $post = ['LEDOn' => 'LEDOn'];
 
-$ch = curl_init('https://dgnbmtfr.p72.rt3.io/');
+$ch = curl_init('https://dgnbmtfr.p72.rt3.io/index.php');
 curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-// execute!
-$response = curl_exec($ch);
 // close the connection, release resources used
 curl_close($ch);
 
