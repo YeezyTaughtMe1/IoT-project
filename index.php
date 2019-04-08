@@ -30,7 +30,7 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#LED">LED</a>
+            <a class="nav-link js-scroll-trigger" href="#LED">LEDs</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#Motion">Motion</a>
