@@ -18,9 +18,8 @@
 
 
 </head>
-/
 <?php
-/*
+
     include('Net/SSH2.php');
 
     $server = "58.173.226.157 -p 59972";
@@ -33,9 +32,16 @@
         exit('Login Failed');
     }
 
-    echo $ssh->exec($command);
-*/
+    if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['lightBtn']))
+    {
+        func();
+    }
+    function func()
+    {
+      echo $ssh->exec($command);   
+    }
 ?>
+
 <body id="page-top">
 
   <!-- Navigation -->
@@ -77,16 +83,37 @@
           <p class="lead">This is the LED Light Sensor. You can control it using the ON/OFF buttons below.</p>
           
           <form method="post" action="index.php">
-              <input type="radio" name="status" value="on">Blink 4 times
-              <input type="radio" name="status" value="off">Turn off
-              <button class="button" name="lightbtn" value="run" type="submit">Run</button>
+              <button type="submit" class="button" name="lightbtn" value="run">Run</button>
+              <button type="submit" class="button" name="offBtn" value="off">Do nothing</button>
           </form>
-          <button class="button">OFF</button>
+          <?php
+
+include('Net/SSH2.php');
+
+$server = "58.173.226.157 -p 59972";
+$username = "pi";
+$password = "networking";
+$command = "python ~/Documents/Project/blink4.py";
+
+$ssh = new Net_SSH2($server);
+if (!$ssh->login($username, $password)) {
+    exit('Login Failed');
+}
+
+if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['lightBtn']))
+{
+    func();
+}
+function func()
+{
+  echo $ssh->exec($command);   
+}
+?>          
         </div>
       </div>
     </div>
   </section>
-    <?php 
+    <?php /*
         $post = ['status' => 'on'];
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, 'http://58.173.226.157:8080/index.php');
@@ -95,6 +122,7 @@
         $response = curl_exec($ch);
         // close the connection, release resources used
         curl_close($ch);
+        */
     ?>
 
 
