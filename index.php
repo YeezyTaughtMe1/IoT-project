@@ -41,7 +41,7 @@
       echo $ssh->exec($command);   
     }
 */ ?>
-<?php
+<?php /*
         include('SSH2.php');
 
         $server = "58.173.226.157:59972";
@@ -49,7 +49,7 @@
         $password = "networking";
         $command = "python ~/Documents/Project/blink4.py";
         $ssh = new Net_SSH2($server);
-        $ssh->login($username, $password); ?>
+        $ssh->login($username, $password); */?>
 
 <body id="page-top">
 
@@ -83,7 +83,7 @@
       <p>Georges Bou Ghantos & Students</p>
     </div>
   </header>
-  <?php
+  <?php /*
   if ($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['lightBtn'])) {
             func();
         }
@@ -91,7 +91,7 @@
           echo $ssh->exec($command);   
           echo "works!";
         }
-  ?> 
+  */?> 
   <section id="LED">
     <div class="container">
       <div class="row">
