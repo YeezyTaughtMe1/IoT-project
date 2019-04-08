@@ -87,9 +87,9 @@
               <button type="submit" class="button" name="offBtn" value="off">Do nothing</button>
           </form>
 <?php
-        include('Net/SSH2.php');
+        include('/Net/SSH2.php');
 
-        $server = "58.173.226.157:59972";
+        $server = "58.173.226.157 -p 59972";
         $username = "pi";
         $password = "networking";
         $command = "python ~/Documents/Project/blink4.py";
