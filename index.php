@@ -16,6 +16,11 @@
   <!-- Custom styles for this template -->
   <link href="31261WebApp/css/scrolling-nav.css" rel="stylesheet">
 
+  <?php
+    $url = 'https://eycnfhqd.p72.rt3.io/';
+    $ch = curl_init();
+  ?>
+
 </head>
 
 <body id="page-top">
@@ -57,12 +62,25 @@
         <div class="col-lg-8 mx-auto">
           <h2>LED Light Sensor</h2>
           <p class="lead">This is the LED Light Sensor. You can control it using the ON/OFF buttons below.</p>
-          <button class="button">ON</button>
+          
+          <form method="post" action="">
+            <p>
+              <button class="button" value="LEDOn">ON</button>
+            </p>
+          </form>
           <button class="button">OFF</button>
         </div>
       </div>
     </div>
   </section>
+    <?php 
+      curl_setopt($ch, $url);
+      //execute post
+      $result = curl_exec($ch);
+      //close connection
+      curl_close($ch);
+    ?>
+
 
   <section id="Motion" class="bg-light">
     <div class="container">
