@@ -86,29 +86,26 @@
               <button type="submit" class="button" name="lightbtn" value="run">Run</button>
               <button type="submit" class="button" name="offBtn" value="off">Do nothing</button>
           </form>
-          <?php
+<?php
+        include('Net/SSH2.php');
 
-include('Net/SSH2.php');
+        $server = "58.173.226.157 -p 59972";
+        $username = "pi";
+        $password = "networking";
+        $command = "python ~/Documents/Project/blink4.py";
 
-$server = "58.173.226.157 -p 59972";
-$username = "pi";
-$password = "networking";
-$command = "python ~/Documents/Project/blink4.py";
+        $ssh = new Net_SSH2($server);
+        if (!$ssh->login($username, $password)) {
+            exit('Login Failed');
+        }
 
-$ssh = new Net_SSH2($server);
-if (!$ssh->login($username, $password)) {
-    exit('Login Failed');
-}
-
-if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['lightBtn']))
-{
-    func();
-}
-function func()
-{
-  echo $ssh->exec($command);   
-  echo "works!";
-}
+        if ($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['lightBtn'])) {
+            func();
+        }
+        function func() {
+          echo $ssh->exec($command);   
+          echo "works!";
+        }
 ?>          
         </div>
       </div>
