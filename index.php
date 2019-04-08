@@ -18,7 +18,24 @@
 
 
 </head>
+/
+<?php
+/*
+    include('Net/SSH2.php');
 
+    $server = "58.173.226.157 -p 59972";
+    $username = "pi";
+    $password = "networking";
+    $command = "python ~/Documents/Project/blink4.py";
+
+    $ssh = new Net_SSH2($server);
+    if (!$ssh->login($username, $password)) {
+        exit('Login Failed');
+    }
+
+    echo $ssh->exec($command);
+*/
+?>
 <body id="page-top">
 
   <!-- Navigation -->
@@ -59,9 +76,9 @@
           <h2>LED Light Sensor</h2>
           <p class="lead">This is the LED Light Sensor. You can control it using the ON/OFF buttons below.</p>
           
-          <form method="post">
+          <form method="post" action="index.php">
             <p>
-              <button class="button" name="onBtn" value="LEDOn">ON</button>
+              <button class="button" name="onBtn" value="LEDOn" type="submit">ON</button>
             </p>
           </form>
           <button class="button">OFF</button>
