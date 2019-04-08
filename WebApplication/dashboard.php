@@ -38,24 +38,9 @@
           <a href="motionSensor.html" class="mdl-layout__tab">Motion Sensor</a>
           <a href="ultrasonicSensor.html" class="mdl-layout__tab">Ultrasonic Sensor</a>
           <a href="LCDDisplay.html" class="mdl-layout__tab">LCD Display</a>
-          <button type="submit" onclick="AdminAction()">Connect API</button>
         </div>
       </header>
       <main class="mdl-layout__content">
-          
-      <script>
-        function AdminAction() {
-          var xhttp = new XMLHttpRequest();
-          xhttp.onreadystatechange = function() {
-               if (this.readyState == 4 && this.status == 200) {
-                   alert(this.responseText);
-               }
-          };
-          xhttp.open("POST", "Our Rest API URL Here", true);
-          xhttp.setRequestHeader("Content-type", "application/json");
-          xhttp.send("Our JSON Data Here");
-      } //
-    </script>
 
       </main>
     </div>
