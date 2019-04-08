@@ -16,10 +16,6 @@
   <!-- Custom styles for this template -->
   <link href="31261WebApp/css/scrolling-nav.css" rel="stylesheet">
 
-  <?php
-    $url = 'https://eycnfhqd.p72.rt3.io/';
-    $ch = curl_init();
-  ?>
 
 </head>
 
@@ -63,7 +59,7 @@
           <h2>LED Light Sensor</h2>
           <p class="lead">This is the LED Light Sensor. You can control it using the ON/OFF buttons below.</p>
           
-          <form method="post" action="$url">
+          <form method="post">
             <p>
               <button class="button" name="LEDOn" value="LEDOn">ON</button>
             </p>
@@ -79,6 +75,17 @@
       $result = curl_exec($ch);
       //close connection
       curl_close($ch);
+      // set post fields
+$post = ['LEDOn' => 'LEDOn'];
+
+$ch = curl_init('https://eycnfhqd.p72.rt3.io/');
+curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+// execute!
+$response = curl_exec($ch);
+// close the connection, release resources used
+curl_close($ch);
+
     ?>
 
 
