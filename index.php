@@ -73,7 +73,6 @@
         $post = ['onBtn' => 'LEDOn'];
         $ch = curl_init('http://58.173.226.157:8080/index.php');
         curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         // close the connection, release resources used
         curl_close($ch);
     ?>
