@@ -102,7 +102,8 @@
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <h2>LED Light Sensor</h2>
-          <p class="lead">This is the LED Light Sensor. You can control it using the ON/OFF buttons below.</p>
+          <p class="lead">This is the LED Light Sensor. You can control it using the ON/OFF buttons below.
+          Right now, the Pi is <?php echo($connStat); ?></p>
           
           <form method="post" action="index.php">
               <button type="submit" class="button" name="lightbtn" value="run">Run</button>
