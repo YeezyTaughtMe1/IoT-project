@@ -18,10 +18,9 @@
 
 
 </head>
-<?php /*
-
-    include('Net/SSH2.php');
-
+<?php
+    include('sshconnect.php');
+    /*
     $server = "58.173.226.157 -p 59972";
     $username = "pi";
     $password = "networking";
@@ -40,7 +39,8 @@
     {
       echo $ssh->exec($command);   
     }
-*/ ?>
+    */
+ ?>
 <?php /*
         include('SSH2.php');
 
@@ -83,15 +83,20 @@
       <p>Georges Bou Ghantos & Students</p>
     </div>
   </header>
-  <?php /*
-  if ($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['lightBtn'])) {
+  <?php
+  if (isset($_POST['lightBtn'])) {
             func();
+            func2();
         }
     function func() {
           echo $ssh->exec($command);   
           echo "works!";
         }
-  */?> 
+    function func2(){
+      $connection->exec($command);
+      echo "other works";
+    }
+  ?> 
   <section id="LED">
     <div class="container">
       <div class="row">
