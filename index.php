@@ -86,16 +86,16 @@
   <?php
   if (isset($_POST['lightBtn'])) {
             func();
-            func2();
+           /* func2();*/
         }
     function func() {
           echo $ssh->exec($command);   
           echo "works!";
         }
-    function func2(){
+   /* function func2(){
       $connection->exec($command);
       echo "other works";
-    }
+    } */
   ?> 
   <section id="LED">
     <div class="container">
