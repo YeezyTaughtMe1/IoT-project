@@ -4,11 +4,11 @@ $ch = curl_init();
 curl_setopt_array($ch, array(
     CURLOPT_URL => "https://api.remot3.it/apv/v27/user/login",
     CURLOPT_HTTPHEADER => array(
-        "developerkey: ".$_ENV["M0RFNTgwQTgtNjRFNy00NjE5LUFBRUItNDMxQzkyRjhGQ0Y2"]
+        "developerkey: ".["M0RFNTgwQTgtNjRFNy00NjE5LUFBRUItNDMxQzkyRjhGQ0Y2"]
     ),
     CURLOPT_POSTFIELDS => json_encode(array(
-        "username" => $_ENV["varun.vijay@student.uts.edu.au"],
-        "password" => $_ENV["tXxGExfN7qBVNii"]
+        "username" => ["varun.vijay@student.uts.edu.au"],
+        "password" => ["tXxGExfN7qBVNii"]
     )),
     CURLOPT_RETURNTRANSFER => true
 ));
