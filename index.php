@@ -1,2 +1,2 @@
-<?php header( 'Location: ./Web\ Application/index.jsp' ) ;  ?>
+<?php header( 'Location: ./Web Application/index.html' ) ;  ?>
 
