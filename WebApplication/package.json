@@ -29,6 +29,7 @@
         "bootstrap": "4.2.1",
         "jquery": "3.3.1",
         "jquery.easing": "^1.4.1"
+        "socket.io": "*"
     },
     "devDependencies": {
         "browser-sync": "2.26.3",
