@@ -1,4 +1,0 @@
-export REMOTEIT_DEVELOPER_KEY="M0RFNTgwQTgtNjRFNy00NjE5LUFBRUItNDMxQzkyRjhGQ0Y2"
-export REMOTEIT_TOKEN="075bb6bd5fd8ab4b4b57a0027c5eaa64"
-
-php listdevices.php
