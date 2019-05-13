@@ -1,1 +1,1 @@
-web: node views/index.html
+web: node routes/index.js
