@@ -60,7 +60,7 @@
           <h2>LED Light</h2>
           <p class="lead">This is the LED Light Sensor. You can control it using the ON/OFF buttons below.</p>
           <input type="checkbox" id="ledon">
-          <button>OFF</button>
+          <button onclick="insertDb("on")">OFF</button>
         </div>
       </div>
     </div>
@@ -93,7 +93,6 @@
     var socket = io.connect('/');
     $("#ledon").change(function(){
       socket.emit("stateChanged", this.checked);
-      insertDb("on");
     });
     </script>
   <script>
