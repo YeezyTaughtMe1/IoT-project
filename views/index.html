@@ -11,11 +11,11 @@
   <title>UTS Internetworking Project</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="../public/stylesheets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="public/stylesheets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="../public/stylesheets/scrolling-nav.css" rel="stylesheet">
-  <link href="../public/stylesheets/style.css" rel="stylesheet">
+  <link href="public/stylesheets/scrolling-nav.css" rel="stylesheet">
+  <link href="public/stylesheets/style.css" rel="stylesheet">
 
 </head>
 
@@ -76,14 +76,14 @@
 
   <!-- Bootstrap core JavaScript -->
 
-  <script src="../public/stylesheets/vendor/jquery/jquery.min.js"></script>
-  <script src="../public/stylesheets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="public/stylesheets/vendor/jquery/jquery.min.js"></script>
+  <script src="public/stylesheets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Plugin JavaScript -->
-  <script src="../public/stylesheets/vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="public/stylesheets/vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Custom JavaScript for this theme -->
-  <script src="../public/javascripts/scrolling-nav.js"></script>
+  <script src="public/javascripts/scrolling-nav.js"></script>
   
   <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
@@ -99,7 +99,7 @@
   <script>   
 function insertDb(){
   var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb://heroku_rkk9fh3h:<dbpassword>@ds135456.mlab.com:35456/heroku_rkk9fh3h";
+  var url = "mongodb://heroku_rkk9fh3h:9ni9okpduof7mnqmfndv242cok@ds135456.mlab.com:35456/heroku_rkk9fh3h";
 MongoClient.connect(url, function(err, db) {
   if (err) throw err;
   var dbo = db.db("heroku_rkk9fh3h");
