@@ -8,12 +8,13 @@ var server = app.listen(app.get('port'), function() {
   debug('Express server listening on port ' + server.address().port);
 });
 //MongoDB add, using mongoose
+
 var mongoose = require("mongoose");
 var dbUrl = "mongodb://heroku_rkk9fh3h:9ni9okpduof7mnqmfndv242cok@ds135456.mlab.com:35456/heroku_rkk9fh3ht";
 
 mongoose.connect(dbUrl , (err) => { 
-  console.log("mongodb connected",err);
-})
+  console.log("mongodb connected", err);
+});
 
 var Message = mongoose.model("App",{ status : String, why : String})
 
@@ -23,8 +24,8 @@ app.post('/App', (req, res) => {
     if(err)
       sendStatus(500);
     res.sendStatus(200);
-  })
-})
+  });
+});
 
 var io = require("socket.io").listen(server);
 
