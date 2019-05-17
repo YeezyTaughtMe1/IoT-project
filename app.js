@@ -11,8 +11,8 @@ var app = express();
 //var app = require('express')();
 
 // view engine setup was set inplace of use
-app.use('views', path.join(__dirname, 'views'));
-app.use('view engine', 'jade');
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'jade');
 
 //app.use(express.static(path.join(__dirname + 'public/stylesheets')));
 
@@ -21,7 +21,7 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(__dirname + 'public'));
+app.set(express.static(__dirname + 'public'));
 
 
 
