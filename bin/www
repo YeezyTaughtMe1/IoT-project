@@ -9,8 +9,8 @@ var server = app.listen(app.get('port'), function() {
 });
 //MongoDB add, using mongoose
 
-var mongoose = require("mongoose");
-var dbUrl = "mongodb://heroku_rkk9fh3h:9ni9okpduof7mnqmfndv242cok@ds135456.mlab.com:35456/heroku_rkk9fh3ht";
+const mongoose = require("mongoose");
+const dbUrl = "mongodb://heroku_rkk9fh3h:9ni9okpduof7mnqmfndv242cok@ds135456.mlab.com:35456/heroku_rkk9fh3h";
 
 mongoose.connect(dbUrl,{useMongoClient : true}, (err) => { 
   console.log("mongodb connected", err);
@@ -18,7 +18,7 @@ mongoose.connect(dbUrl,{useMongoClient : true}, (err) => {
 
 var Message = mongoose.model("App",{ status : String, why : String});
 
-app.post('/App', (req, res) => {
+app.post("/App", (req, res) => {
   var appStat = new Message(req.body);
   appStat.save((err) =>{
     if(err)
