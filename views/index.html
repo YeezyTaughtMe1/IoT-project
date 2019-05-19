@@ -62,7 +62,7 @@
           <h2>LED Light</h2>
           <p class="lead">This is the LED Light Sensor. You can control it using the ON/OFF buttons below.</p>
           <input type="checkbox" id="ledon">
-          <button>OFF</button>
+          <button onclick="insertDb(this.value)" value="on">on</button>
           <button id="status" value="off" type="submit">Off (adding to db)</button>
           <button id="actionCommit" value="on" type="submit">On (adding to db)</button>
 
@@ -104,7 +104,7 @@
     // function insertDb(stat){
     //   var MongoClient = require('mongodb').MongoClient;
     //   var url = "mongodb://heroku_rkk9fh3h:9ni9okpduof7mnqmfndv242cok@ds135456.mlab.com:35456/heroku_rkk9fh3h";
-
+    //
     //   MongoClient.connect(url, function (err, db) {
     //     if (err) throw err;
     //     var dbo = db.db("heroku_rkk9fh3h");
@@ -118,9 +118,9 @@
     // }
     </script>
   <script>
-    $("#status").click(()=>{
+    $("#ledon").change(()=>{
         sendMessage({
-          Action: $("#status").val(),
+          Action: $("on"),
           Why: ("Heroku app changed light state")
       });
     });
