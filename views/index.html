@@ -10,11 +10,11 @@
   <title>UTS Internetworking Project</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="stylesheets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="public/stylesheets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="stylesheets/scrolling-nav.css" rel="stylesheet">
-  <link href="stylesheets/style.css" rel="stylesheet">
+  <link href="public/stylesheets/scrolling-nav.css" rel="stylesheet">
+  <link href="public/stylesheets/style.css" rel="stylesheet">
 
 </head>
 
@@ -60,6 +60,9 @@
           <p class="lead">This is the LED Light Sensor. You can control it using the ON/OFF buttons below.</p>
           <input type="checkbox" id="ledon">
           <button>OFF</button>
+          <button id="status" value="off" type="submit">Off (adding to db)</button>
+          <button id="actionCommit" value="on" type="submit">On (adding to db)</button>
+
         </div>
       </div>
     </div>
@@ -75,24 +78,24 @@
 
   <!-- Bootstrap core JavaScript -->
 
-  <script src="stylesheets/vendor/jquery/jquery.min.js"></script>
-  <script src="stylesheets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src=".public/stylesheets/vendor/jquery/jquery.min.js"></script>
+  <script src="public/stylesheets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Plugin JavaScript -->
-  <script src="stylesheets/vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="public/stylesheets/vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Custom JavaScript for this theme -->
-  <script src="stylesheets/vendor/scrolling-nav.js"></script>
+  <script src="public/stylesheets/vendor/scrolling-nav.js"></script>
   
   <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
-    <script src="socket.io/socket.io.js"></script>
+    <script src="socket.io/socket.io.js" type="application/javascript"></script>
     <script type="text/javascript">
-    var socket = io.connect('/');
-    $("#ledon").change(function(){
-      socket.emit("stateChanged", this.checked);
-    });
+      var socket = io.connect('/');
+      $("#ledon").change(function(){
+        socket.emit("stateChanged", this.checked);
+      });
     </script>
   <script>
     // function insertDb(stat){
@@ -111,17 +114,16 @@
     //   });
     // }
     </script>
-    <script>
-        $(() => {
-        $("#ledon").change(()=>{
-          sendMessage({
-              status: $("#ledon").val(), 
-              why:$("webapp turned pi on")});
-            })
-        })
+  <script>
+    $("#status").click(()=>{
+        sendMessage({
+          Action: $("#status").val(),
+          Why: ("Heroku app changed light state")
+      });
+    });
 
     function sendMessage(message){
-      $.post("https://iotproject31261.herokuapp.com/", message)
+      $.post("https://iotproject31261.herokuapp.com/messages", message);
     }
     </script>
 
