@@ -17,7 +17,7 @@
   <link href="stylesheets/style.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="mongoose/mongoose.js"></script>
-
+    <script src="javascripts/mongo.js"></script>
 
 </head>
 
@@ -111,33 +111,22 @@
       });
     </script>
   <script>
-    // function insertDb(stat){
-    //   var MongoClient = require('mongodb').MongoClient;
-    //   var url = "mongodb://heroku_rkk9fh3h:9ni9okpduof7mnqmfndv242cok@ds135456.mlab.com:35456/heroku_rkk9fh3h";
-    //
-    //   MongoClient.connect(url, function (err, db) {
-    //     if (err) throw err;
-    //     var dbo = db.db("heroku_rkk9fh3h");
-    //     var myobj = {status: stat, why: "app turned pi on"};
-    //     dbo.collection("App").insertOne(myobj, function (err, res) {
-    //       if (err) throw err;
-    //       console.log(res);
-    //       db.close();
-    //     });
-    //   });
-    // }
+    function insertDb(stat){
+      var myobj = {status: stat, why: "app turned pi on"};
+      addtoDB(myobj);
+    }
     </script>
   <script>
-    $("#ledon").change(()=>{
-        sendMessage({
-          Action: $("on"),
-          why: ("Heroku app changed light state")
-      });
-    });
+    // $("#ledon").change(()=>{
+    //     sendMessage({
+    //       Action: ("on"),
+    //       why: ("Heroku app changed light state")
+    //   });
+    // });
 
-    function sendMessage(message){
-      $.post("https://iotproject31261.herokuapp.com/messages", message);
-    }
+    // function sendMessage(message){
+    //   $.post("https://iotproject31261.herokuapp.com/messages", message);
+    // }
     </script>
 
   </div>
