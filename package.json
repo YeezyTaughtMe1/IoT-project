@@ -16,11 +16,6 @@
     "morgan": "~1.9.1",
     "socket.io": "*",
     "mocha": "^6.1.4"
-  },
-  "scripts": {
-    "test": "mocha"
   }
-  
-  
 }
 
