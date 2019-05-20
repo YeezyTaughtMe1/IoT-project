@@ -62,7 +62,7 @@
           <h2>LED Light</h2>
           <p class="lead">This is the LED Light Sensor. You can control it using the ON/OFF buttons below.</p>
           <input type="checkbox" id="ledon">
-          <button onclick="insertDb(this.value)" value="on">on</button>
+          <button id="on" value="on" onclick="insertDb(on)">On</button>
           <button id="status" value="off" type="submit">Off (adding to db)</button>
           <button id="actionCommit" value="on" type="submit">On (adding to db)</button>
 
@@ -103,7 +103,7 @@
   <script>
     function insertDb(stat){
       var myobj = {status: stat, why: "app turned pi on"};
-      addtoDB(myobj);
+      insertOne(myobj);
     }
     </script>
   <script>
