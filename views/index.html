@@ -27,9 +27,32 @@
 
 <body>
 
-  <!--<div class="login-cover">
+  <div class="login-cover">
+    <dialog class="mdl-dialog">
+      <h4 class="mdl-dialog__title">Welcome</h4>
+      <div class="mdl-dialog__content">
+        <!-- Textfield with Floating Label -->
 
-  </div>-->
+        <form action="#">
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="loginEmail">
+            <label class="mdl-textfield__label" for="sample3">Email...</label>
+          </div>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="loginPassword">
+            <label class="mdl-textfield__label" for="sample3">Password...</label>
+          </div>
+        </form>
+
+      </div>
+      <div class="mdl-dialog__actions">
+        <!-- Colored raised button -->
+        <button id="loginButton" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+          Sign In
+        </button>
+      </div>
+    </dialog>
+  </div>
 
 
   <!-- Navigation -->
