@@ -114,7 +114,7 @@
             <div>
               <!-- Accent-colored raised button with ripple -->
               <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-                Button
+                Submit
               </button>
             </div>
           </form>
@@ -148,7 +148,7 @@
   <script src="socket.io/socket.io.js"></script>
   <script type="text/javascript">
     var socket = io.connect('/');
-    $("#ledon").change(function () {
+    $("#switchLEDOn").change(function () {
       socket.emit("stateChanged", this.checked);
     });
   </script>
