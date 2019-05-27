@@ -34,7 +34,7 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">LED</a>
+            <a class="nav-link js-scroll-trigger" href="#led">LED</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#services">-</a>
@@ -57,12 +57,48 @@
     </div>
   </header>
 
-  <section id="about">
+  <!--LED Light Section-->
+  <section id="led">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <h2>LED Light</h2>
           <p class="lead">This is the LED Light Sensor. You can control it using the ON/OFF buttons below.</p>
+          <input type="checkbox" id="ledon">
+          <button id="on" value="on" onclick="insertDb(on)">On</button>
+          <button id="status" value="off" type="submit">Off (adding to db)</button>
+          <button id="actionCommit" value="on" type="submit">On (adding to db)</button>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--Motion Sensor Section-->
+  <section id="motionSensor">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Motion Sensor</h2>
+          <p class="lead">You can control the Motion Sensor using the on/off switch below.</p>
+          <input type="checkbox" id="ledon">
+          <button id="on" value="on" onclick="insertDb(on)">On</button>
+          <button id="status" value="off" type="submit">Off (adding to db)</button>
+          <button id="actionCommit" value="on" type="submit">On (adding to db)</button>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--7 Segment Display Section-->
+  <section id="motionSensor">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>7 Segment Display</h2>
+          <p class="lead">Please enter a number between 0-9 inclusive. The number submitted will be shown on the 7
+            Segment Display.</p>
           <input type="checkbox" id="ledon">
           <button id="on" value="on" onclick="insertDb(on)">On</button>
           <button id="status" value="off" type="submit">Off (adding to db)</button>
