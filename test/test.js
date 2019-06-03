@@ -188,4 +188,4 @@ describe('getStat - myobj', function() {
 });
 });
 
-done();
+process.exit();
