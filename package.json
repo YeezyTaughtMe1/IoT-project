@@ -21,7 +21,8 @@
     "mongoose": "^5.5.9",
     "morgan": "~1.9.1",
     "sinon": "^7.3.2",
-    "socket.io": "*"
+    "socket.io": "*",
+    "prepublish":"mocha"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
