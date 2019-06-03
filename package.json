@@ -3,9 +3,13 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www" ,
+    "prepublish": "mocha",
+    "mocha": "^6.1.4" 
   },
   "dependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
@@ -16,6 +20,12 @@
     "mongodb": "^3.2.4",
     "mongoose": "^5.5.9",
     "morgan": "~1.9.1",
-    "socket.io": "*"
-    }
+    "sinon": "^7.3.2",
+    "socket.io": "*",
+    "prepublish": "mocha"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3"
+  }
 }
