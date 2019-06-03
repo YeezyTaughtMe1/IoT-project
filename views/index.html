@@ -1,156 +1,182 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">  
+    <meta name="author" content="">
+    <meta name="author" content="">  
 
-  <title>UTS Internetworking Project</title>
+    <title>IoTproject31261 App</title>
 
-  <!-- Bootstrap core CSS -->
-  <link href="stylesheets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="stylesheets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Custom styles for this template -->
-  <link href="stylesheets/scrolling-nav.css" rel="stylesheet">
-  <link href="stylesheets/style.css" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-  <script src="mongoose/mongoose.js"></script>
-  <script src="javascripts/mongo.js"></script>
+    <!-- Custom styles for this template -->
+    <link href="stylesheets/scrolling-nav.css" rel="stylesheet">
+    <link href="stylesheets/style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="mongoose/mongoose.js"></script>
+    <script src="javascripts/mongo.js"></script>
 
-  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.green-light_green.min.css">
-  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.green-light_green.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
-</head>
+  </head>
 
 <body id="#page-top">
 
-  <!-- Navigation -->
+  <div id="login_div" class="main-div">
+    <h3>31261 IoT Project App - Authorized Users Only</h3>
+    <input type="email" placeholder="Email..." id="email_field" />
+    <input type="password" placeholder="Password..." id="password_field" />
+
+    <button onclick="login()">Login to Account</button>
+  </div>
+
+  <div id="user_div" class="loggedin-div">
+    <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">UTS 31261</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" id="scrolltrigger1" href="#led">LED</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" id="scrolltrigger2" href="#motionSensor">Motion Sensor</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" id="scrolltrigger3" href="#ultrasonicRangeSensor">U. Range Sensor</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" id="scrolltrigger4" href="#7SegmentDisplay">7 Segment Display</a>
-          </li>
-        </ul>
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">UTS 31261</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+          aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" id="scrolltrigger1" href="#led">LED</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" id="scrolltrigger2" href="#motionSensor">Motion Sensor</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" id="scrolltrigger3" href="#ultrasonicRangeSensor">U. Range Sensor</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" id="scrolltrigger4" href="#7SegmentDisplay">7 Segment Display</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
-  <header class="bg-primary text-white">
-    <div class="container text-center">
-      <h1>UTS Internetworking Project</h1>
-      <p class="lead">Deploying an IoT-Application to Multi-Cloud using DevOps and dynamically collected IoT-data from
-        Raspberry Pi sensors</p>
-      <br>
-      <p class="lead">Georges Bou Ghantous &amp; Students at UTS</p>
-    </div>
-  </header>
+    <header class="bg-primary text-white">
+        <div class="container text-center">
+          <h1>UTS Internetworking Project</h1>
+          <p class="lead">Deploying an IoT-Application to Multi-Cloud using DevOps and dynamically collected IoT-data from
+            Raspberry Pi sensors</p>
+          <br>
+          <p class="lead">Georges Bou Ghantous &amp; Students at UTS</p>
+        </div>
+      </header>
 
-  <!--LED Light Section-->
+    <!--LED Light Section-->
   <section id="led">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <h2>LED Light</h2>
-          <p class="lead">This is the LED Light Sensor. You can control it using the ON/OFF buttons below.</p>
-          <input type="checkbox" id="ledon">
-          <button id="on" value="on" onclick="insertDb(on)">On</button>
-          <button id="status" value="off" type="submit">Off (adding to db)</button>
-          <button id="actionCommit" value="on" type="submit">On (adding to db)</button>
-          <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switchLEDOn">
-            <input type="checkbox" id="switchLEDOn" class="mdl-switch__input">
-            <span class="mdl-switch__label"></span>
-          </label>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>LED Light</h2>
+            <p class="lead">This is the LED Light Sensor. You can control it using the ON/OFF buttons below.</p>
+            <input type="checkbox" id="ledon">
+            <button id="on" value="on" onclick="insertDb(on)">On</button>
+            <button id="status" value="off" type="submit">Off (adding to db)</button>
+            <button id="actionCommit" value="on" type="submit">On (adding to db)</button>
+            <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switchLEDOn">
+              <input type="checkbox" id="switchLEDOn" class="mdl-switch__input">
+              <span class="mdl-switch__label"></span>
+            </label>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!--Motion Sensor Section-->
-  <section id="motionSensor" class="bg-light">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <h2>Motion Sensor</h2>
-          <p class="lead">You can control the Motion Sensor using the on/off switch below.</p>
-          <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switchMotionOn">
-            <input type="checkbox" id="switchMotionOn" class="mdl-switch__input">
-            <span class="mdl-switch__label"></span>
-          </label>
+    </section>
+  
+    <!--Motion Sensor Section-->
+    <section id="motionSensor" class="bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>Motion Sensor</h2>
+            <p class="lead">You can control the Motion Sensor using the on/off switch below.</p>
+            <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switchMotionOn">
+              <input type="checkbox" id="switchMotionOn" class="mdl-switch__input">
+              <span class="mdl-switch__label"></span>
+            </label>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!--Ultrasonic Ranging Sensor-->
-  <section id="ultrasonicRangeSensor">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <h2>Ultrasonic Range Sensor</h2>
-          <p class="lead">You can control the Ultrasonic Range Sensor using the on/off switch below.</p>
-          <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switchRangeOn">
-            <input type="checkbox" id="switchRangeOn" class="mdl-switch__input">
-            <span class="mdl-switch__label"></span>
-          </label>
+    </section>
+  
+    <!--Ultrasonic Ranging Sensor-->
+    <section id="ultrasonicRangeSensor">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>Ultrasonic Range Sensor</h2>
+            <p class="lead">You can control the Ultrasonic Range Sensor using the on/off switch below.</p>
+            <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switchRangeOn">
+              <input type="checkbox" id="switchRangeOn" class="mdl-switch__input">
+              <span class="mdl-switch__label"></span>
+            </label>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!--7 Segment Display Section-->
-  <section id="7SegmentDisplay" class="bg-light">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <h2>7 Segment Display</h2>
-          <p class="lead">Please enter a number between 0-9 inclusive. The number submitted will be shown on the 7
-            Segment Display.</p>
-          <!-- Numeric Textfield with Floating Label -->
-          <form action="#">
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-              <input class="mdl-textfield__input" type="text" pattern="^([0-9])$" id="numberEntered">
-              <label class="mdl-textfield__label" for="numberEntered">Number...</label>
-              <span class="mdl-textfield__error">Input is not a number between 0 - 9</span>
-            </div>
-            <div>
-              <!-- Accent-colored raised button with ripple -->
-              <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-                Submit
-              </button>
-            </div>
-          </form>
+    </section>
+  
+    <!--7 Segment Display Section-->
+    <section id="7SegmentDisplay" class="bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>7 Segment Display</h2>
+            <p class="lead">Please enter a number between 0-9 inclusive. The number submitted will be shown on the 7
+              Segment Display.</p>
+            <!-- Numeric Textfield with Floating Label -->
+            <form action="#">
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" pattern="^([0-9])$" id="numberEntered">
+                <label class="mdl-textfield__label" for="numberEntered">Number...</label>
+                <span class="mdl-textfield__error">Input is not a number between 0 - 9</span>
+              </div>
+              <div>
+                <!-- Accent-colored raised button with ripple -->
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Georges Bou Ghantous &amp; Students UTS 2019</p>
+      </div>
+      <button onclick="logout()">Logout</button>
+      <!-- /.container -->
+    </footer>
+  </div>
 
-  <!-- Footer -->
-  <footer class="py-5 bg-dark">
-    <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Georges Bou Ghantous &amp; Students UTS 2019</p>
-    </div>
-    <!-- /.container -->
-  </footer>
-
-  <!-- Bootstrap core JavaScript -->
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDlf-mcTEw_y4SlptKkm3UIggTZkECjhAk",
+      authDomain: "fir-web-application-a6405.firebaseapp.com",
+      databaseURL: "https://fir-web-application-a6405.firebaseio.com",
+      projectId: "fir-web-application-a6405",
+      storageBucket: "fir-web-application-a6405.appspot.com",
+      messagingSenderId: "550108672175",
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="login.js"></script>
+  <script src="index.js"></script>
 
   <script src="stylesheets/vendor/jquery/jquery.min.js"></script>
   <script src="stylesheets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
