@@ -29,10 +29,10 @@
   <div id="login_div" class="main-div">
     <h3>31261 IoT Project App - Authorized Users Only</h3>
     
-    <input type="email" placeholder="Email..." id="email_field" />
-    <input type="password" placeholder="Password..." id="password_field" />
+    <input type="email" placeholder="Email..." id="email_field" class="mdl-textfield__input" />
+    <input type="password" placeholder="Password..." id="password_field" class="mdl-textfield__input" />
 
-    <button onclick="login()" id="login_button">Login to Account</button>
+    <button onclick="login()" id="login_button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Login to Account</button>
   </div>
 
   <div id="user_div" class="loggedin-div">
@@ -57,6 +57,9 @@
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" id="scrolltrigger4" href="#7SegmentDisplay">7 Segment Display</a>
+            </li>
+            <li class="nav-item">
+              <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="logout()" id="logout_button">Logout</button>
             </li>
           </ul>
         </div>
@@ -157,7 +160,6 @@
       <div class="container">
         <p class="m-0 text-center text-white">Copyright &copy; Georges Bou Ghantous &amp; Students UTS 2019</p>
       </div>
-      <button onclick="logout()" id="logout_button">Logout</button>
       <!-- /.container -->
     </footer>
   </div>
