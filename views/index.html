@@ -202,6 +202,9 @@
     $("#switchLEDOn").change(function () {
       socket.emit("stateChanged", this.checked);
     });
+    $("#switchMotionOn").change(function () {
+      socket.emit("stateChanged", this.checked);
+    });
   </script>
   <script>
     function insertDb(stat) {
