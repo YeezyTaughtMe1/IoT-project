@@ -47,7 +47,11 @@ var io = require("socket.io").listen(server);
 io.on("connection", function(socket){
   console.log("Client Connected");
 
-  socket.on("stateChanged", function(state){
+  socket.on("LEDStateChanged", function(state){
+    console.log("State Changed: " + state);
+    io.emit("updateState", state);
+  });
+  socket.on("motionStateChanged", function(state){
     console.log("State Changed: " + state);
     io.emit("updateState", state);
   });
