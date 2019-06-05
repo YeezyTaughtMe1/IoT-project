@@ -49,10 +49,10 @@ io.on("connection", function(socket){
 
   socket.on("LEDStateChanged", function(state){
     console.log("State Changed: " + state);
-    io.emit("updateState", state);
+    io.emit("LEDStateUpdate", state);
   });
   socket.on("motionStateChanged", function(state){
     console.log("State Changed: " + state);
-    io.emit("updateState", state);
+    io.emit("motionStateUpdate", state);
   });
 });
