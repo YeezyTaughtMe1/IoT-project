@@ -13,11 +13,11 @@
             "name": "User is on the IoT WebApp",
             "result": {
               "status": "passed",
-              "duration": 428750
+              "duration": 945769
             },
             "line": 6,
             "match": {
-              "location": "/Users/varun/Documents/proj/iot-interworking-project/step-definitions/login.js:4"
+              "location": "Project/iot-interworking-project/step-definitions/login.js:4"
             }
           },
           {
@@ -26,11 +26,11 @@
             "name": "User logs in using an valid email",
             "result": {
               "status": "passed",
-              "duration": 816667
+              "duration": 4895823
             },
             "line": 9,
             "match": {
-              "location": "/Users/varun/Documents/proj/iot-interworking-project/step-definitions/login.js:10"
+              "location": "Project/iot-interworking-project/step-definitions/login.js:10"
             }
           },
           {
@@ -39,11 +39,11 @@
             "name": "User logs in using an valid password",
             "result": {
               "status": "passed",
-              "duration": 459412
+              "duration": 689586
             },
             "line": 10,
             "match": {
-              "location": "/Users/varun/Documents/proj/iot-interworking-project/step-definitions/login.js:16"
+              "location": "Project/iot-interworking-project/step-definitions/login.js:16"
             }
           },
           {
@@ -52,24 +52,23 @@
             "name": "User is taken to the dashboard",
             "result": {
               "status": "passed",
-              "duration": 163149
+              "duration": 95490
             },
             "line": 11,
             "match": {
-              "location": "/Users/varun/Documents/proj/iot-interworking-project/step-definitions/login.js:38"
+              "location": "Project/iot-interworking-project/step-definitions/login.js:36"
             }
           },
           {
             "arguments": [],
             "keyword": "After ",
             "result": {
-              "status": "failed",
-              "duration": 3963248261,
-              "error_message": "ElementNotVisibleError: element not interactable\n  (Session info: chrome=75.0.3770.80)\n  (Driver info: chromedriver=2.46.628411 (3324f4c8be9ff2f70a05a30ebc72ffb013e1a71e),platform=Mac OS X 10.13.6 x86_64)\n    at Object.checkLegacyResponse (/Users/varun/Documents/proj/iot-interworking-project/node_modules/selenium-cucumber-js/node_modules/selenium-webdriver/lib/error.js:529:15)\n    at parseHttpResponse (/Users/varun/Documents/proj/iot-interworking-project/node_modules/selenium-cucumber-js/node_modules/selenium-webdriver/lib/http.js:509:13)\n    at /Users/varun/Documents/proj/iot-interworking-project/node_modules/selenium-cucumber-js/node_modules/selenium-webdriver/lib/http.js:441:30\n    at processTicksAndRejections (internal/process/task_queues.js:89:5)\nFrom: Task: WebElement.click()\n    at thenableWebDriverProxy.schedule (/Users/varun/Documents/proj/iot-interworking-project/node_modules/selenium-cucumber-js/node_modules/selenium-webdriver/lib/webdriver.js:807:17)\n    at WebElementPromise.schedule_ (/Users/varun/Documents/proj/iot-interworking-project/node_modules/selenium-cucumber-js/node_modules/selenium-webdriver/lib/webdriver.js:2015:25)\n    at WebElementPromise.click (/Users/varun/Documents/proj/iot-interworking-project/node_modules/selenium-cucumber-js/node_modules/selenium-webdriver/lib/webdriver.js:2096:17)\n    at createWorld.<anonymous> (/Users/varun/Documents/proj/iot-interworking-project/step-definitions/login.js:22:53)\n    at processTicksAndRejections (internal/process/task_queues.js:82:9)"
+              "status": "passed",
+              "duration": 7012103605
             },
             "hidden": true,
             "match": {
-              "location": "/Users/varun/Documents/proj/iot-interworking-project/node_modules/selenium-cucumber-js/runtime/world.js:250"
+              "location": "Project/iot-interworking-project/node_modules/selenium-cucumber-js/runtime/world.js:250"
             }
           }
         ],
@@ -93,11 +92,11 @@
             "name": "User is on the IoT WebApp",
             "result": {
               "status": "passed",
-              "duration": 97388
+              "duration": 326684
             },
             "line": 6,
             "match": {
-              "location": "/Users/varun/Documents/proj/iot-interworking-project/step-definitions/login.js:4"
+              "location": "Project/iot-interworking-project/step-definitions/login.js:4"
             }
           },
           {
@@ -106,11 +105,11 @@
             "name": "User logs in using an invalid email",
             "result": {
               "status": "passed",
-              "duration": 185929
+              "duration": 605967
             },
             "line": 14,
             "match": {
-              "location": "/Users/varun/Documents/proj/iot-interworking-project/step-definitions/login.js:25"
+              "location": "Project/iot-interworking-project/step-definitions/login.js:23"
             }
           },
           {
@@ -119,11 +118,11 @@
             "name": "User logs in using an invalid password",
             "result": {
               "status": "passed",
-              "duration": 267225
+              "duration": 699391
             },
             "line": 15,
             "match": {
-              "location": "/Users/varun/Documents/proj/iot-interworking-project/step-definitions/login.js:31"
+              "location": "Project/iot-interworking-project/step-definitions/login.js:29"
             }
           },
           {
@@ -132,11 +131,11 @@
             "name": "User remains on the login screen",
             "result": {
               "status": "passed",
-              "duration": 158248
+              "duration": 361514
             },
             "line": 16,
             "match": {
-              "location": "/Users/varun/Documents/proj/iot-interworking-project/step-definitions/login.js:43"
+              "location": "Project/iot-interworking-project/step-definitions/login.js:41"
             }
           },
           {
@@ -144,11 +143,11 @@
             "keyword": "After ",
             "result": {
               "status": "passed",
-              "duration": 3902027334
+              "duration": 5726250252
             },
             "hidden": true,
             "match": {
-              "location": "/Users/varun/Documents/proj/iot-interworking-project/node_modules/selenium-cucumber-js/runtime/world.js:250"
+              "location": "Project/iot-interworking-project/node_modules/selenium-cucumber-js/runtime/world.js:250"
             }
           }
         ],
@@ -171,6 +170,6 @@
         "line": 2
       }
     ],
-    "uri": "/Users/varun/Documents/proj/iot-interworking-project/features/login.feature"
+    "uri": "/Users/HenryDinh/Desktop/IoT Project/iot-interworking-project/features/login.feature"
   }
 ]
