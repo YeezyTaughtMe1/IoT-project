@@ -7,13 +7,13 @@
             <property name="URI" value="/Users/HenryDinh/Desktop/IoT Project/iot-interworking-project/features/login.feature">
             </property>
         </properties>
-        <testcase name="Given User is on the IoT WebApp" classname="login-functionality-for-iotwebapp;verify-that-user-is-able-to-login-by-using-a-valid-email-and-password" time="0.001396415">
+        <testcase name="Given User is on the IoT WebApp" classname="login-functionality-for-iotwebapp;verify-that-user-is-able-to-login-by-using-a-valid-email-and-password" time="0.001011215">
         </testcase>
-        <testcase name="When User logs in using an valid email" classname="login-functionality-for-iotwebapp;verify-that-user-is-able-to-login-by-using-a-valid-email-and-password" time="0.005747921">
+        <testcase name="When User logs in using an valid email" classname="login-functionality-for-iotwebapp;verify-that-user-is-able-to-login-by-using-a-valid-email-and-password" time="0.004101438">
         </testcase>
-        <testcase name="And User logs in using an valid password" classname="login-functionality-for-iotwebapp;verify-that-user-is-able-to-login-by-using-a-valid-email-and-password" time="0.001047795">
+        <testcase name="And User logs in using an valid password" classname="login-functionality-for-iotwebapp;verify-that-user-is-able-to-login-by-using-a-valid-email-and-password" time="0.00285596">
         </testcase>
-        <testcase name="Then User is taken to the dashboard" classname="login-functionality-for-iotwebapp;verify-that-user-is-able-to-login-by-using-a-valid-email-and-password" time="0.000072858">
+        <testcase name="Then User is taken to the dashboard" classname="login-functionality-for-iotwebapp;verify-that-user-is-able-to-login-by-using-a-valid-email-and-password" time="0.000389067">
         </testcase>
     </testsuite>
     <testsuite name="login-functionality-for-iotwebapp;verify-that-user-is-not-able-to-login-by-using-an-invalid-email-and-password" tests="4" failures="0" skipped="0">
@@ -23,13 +23,13 @@
             <property name="URI" value="/Users/HenryDinh/Desktop/IoT Project/iot-interworking-project/features/login.feature">
             </property>
         </properties>
-        <testcase name="Given User is on the IoT WebApp" classname="login-functionality-for-iotwebapp;verify-that-user-is-not-able-to-login-by-using-an-invalid-email-and-password" time="0.000283031">
+        <testcase name="Given User is on the IoT WebApp" classname="login-functionality-for-iotwebapp;verify-that-user-is-not-able-to-login-by-using-an-invalid-email-and-password" time="0.000171908">
         </testcase>
-        <testcase name="When User logs in using an invalid email" classname="login-functionality-for-iotwebapp;verify-that-user-is-not-able-to-login-by-using-an-invalid-email-and-password" time="0.00061198">
+        <testcase name="When User logs in using an invalid email" classname="login-functionality-for-iotwebapp;verify-that-user-is-not-able-to-login-by-using-an-invalid-email-and-password" time="0.000403638">
         </testcase>
-        <testcase name="And User logs in using an invalid password" classname="login-functionality-for-iotwebapp;verify-that-user-is-not-able-to-login-by-using-an-invalid-email-and-password" time="0.000720304">
+        <testcase name="And User logs in using an invalid password" classname="login-functionality-for-iotwebapp;verify-that-user-is-not-able-to-login-by-using-an-invalid-email-and-password" time="0.00048002">
         </testcase>
-        <testcase name="Then User remains on the login screen" classname="login-functionality-for-iotwebapp;verify-that-user-is-not-able-to-login-by-using-an-invalid-email-and-password" time="0.000510504">
+        <testcase name="Then User remains on the login screen" classname="login-functionality-for-iotwebapp;verify-that-user-is-not-able-to-login-by-using-an-invalid-email-and-password" time="0.000287157">
         </testcase>
     </testsuite>
 </testsuites>

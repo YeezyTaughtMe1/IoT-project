@@ -34,8 +34,8 @@ module.exports = function () {
     });
 
     this.Then(/^User is taken to the dashboard$/, function() {
-        
-        
+
+        driver.findElement(by.id('logout_button')).click();    
     });
 
     this.Then(/^User remains on the login screen$/, function() {

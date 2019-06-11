@@ -13,7 +13,7 @@
             "name": "User is on the IoT WebApp",
             "result": {
               "status": "passed",
-              "duration": 1396415
+              "duration": 1011215
             },
             "line": 6,
             "match": {
@@ -26,7 +26,7 @@
             "name": "User logs in using an valid email",
             "result": {
               "status": "passed",
-              "duration": 5747921
+              "duration": 4101438
             },
             "line": 9,
             "match": {
@@ -39,7 +39,7 @@
             "name": "User logs in using an valid password",
             "result": {
               "status": "passed",
-              "duration": 1047795
+              "duration": 2855960
             },
             "line": 10,
             "match": {
@@ -52,7 +52,7 @@
             "name": "User is taken to the dashboard",
             "result": {
               "status": "passed",
-              "duration": 72858
+              "duration": 389067
             },
             "line": 11,
             "match": {
@@ -63,8 +63,9 @@
             "arguments": [],
             "keyword": "After ",
             "result": {
-              "status": "passed",
-              "duration": 7211886322
+              "status": "failed",
+              "duration": 6123169098,
+              "error_message": "ElementNotVisibleError: element not interactable\n  (Session info: chrome=75.0.3770.80)\n  (Driver info: chromedriver=2.46.628411 (3324f4c8be9ff2f70a05a30ebc72ffb013e1a71e),platform=Mac OS X 10.14.5 x86_64)\n    at Object.checkLegacyResponse (/Users/HenryDinh/Desktop/IoT Project/iot-interworking-project/node_modules/selenium-cucumber-js/node_modules/selenium-webdriver/lib/error.js:529:15)\n    at parseHttpResponse (/Users/HenryDinh/Desktop/IoT Project/iot-interworking-project/node_modules/selenium-cucumber-js/node_modules/selenium-webdriver/lib/http.js:509:13)\n    at doSend.then.response (/Users/HenryDinh/Desktop/IoT Project/iot-interworking-project/node_modules/selenium-cucumber-js/node_modules/selenium-webdriver/lib/http.js:441:30)\n    at process._tickCallback (internal/process/next_tick.js:68:7)\nFrom: Task: WebElement.click()\n    at thenableWebDriverProxy.schedule (/Users/HenryDinh/Desktop/IoT Project/iot-interworking-project/node_modules/selenium-cucumber-js/node_modules/selenium-webdriver/lib/webdriver.js:807:17)\n    at WebElementPromise.schedule_ (/Users/HenryDinh/Desktop/IoT Project/iot-interworking-project/node_modules/selenium-cucumber-js/node_modules/selenium-webdriver/lib/webdriver.js:2015:25)\n    at WebElementPromise.click (/Users/HenryDinh/Desktop/IoT Project/iot-interworking-project/node_modules/selenium-cucumber-js/node_modules/selenium-webdriver/lib/webdriver.js:2096:17)\n    at createWorld.<anonymous> (/Users/HenryDinh/Desktop/IoT Project/iot-interworking-project/step-definitions/login.js:38:52)\n    at process._tickCallback (internal/process/next_tick.js:61:11)"
             },
             "hidden": true,
             "match": {
@@ -92,7 +93,7 @@
             "name": "User is on the IoT WebApp",
             "result": {
               "status": "passed",
-              "duration": 283031
+              "duration": 171908
             },
             "line": 6,
             "match": {
@@ -105,7 +106,7 @@
             "name": "User logs in using an invalid email",
             "result": {
               "status": "passed",
-              "duration": 611980
+              "duration": 403638
             },
             "line": 14,
             "match": {
@@ -118,7 +119,7 @@
             "name": "User logs in using an invalid password",
             "result": {
               "status": "passed",
-              "duration": 720304
+              "duration": 480020
             },
             "line": 15,
             "match": {
@@ -131,7 +132,7 @@
             "name": "User remains on the login screen",
             "result": {
               "status": "passed",
-              "duration": 510504
+              "duration": 287157
             },
             "line": 16,
             "match": {
@@ -143,7 +144,7 @@
             "keyword": "After ",
             "result": {
               "status": "passed",
-              "duration": 5938122851
+              "duration": 5370143882
             },
             "hidden": true,
             "match": {
