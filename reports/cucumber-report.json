@@ -13,7 +13,7 @@
             "name": "User is on the IoT WebApp",
             "result": {
               "status": "passed",
-              "duration": 443708
+              "duration": 428750
             },
             "line": 6,
             "match": {
@@ -26,7 +26,7 @@
             "name": "User logs in using an valid email",
             "result": {
               "status": "passed",
-              "duration": 806390
+              "duration": 816667
             },
             "line": 9,
             "match": {
@@ -39,7 +39,7 @@
             "name": "User logs in using an valid password",
             "result": {
               "status": "passed",
-              "duration": 361356
+              "duration": 459412
             },
             "line": 10,
             "match": {
@@ -52,11 +52,11 @@
             "name": "User is taken to the dashboard",
             "result": {
               "status": "passed",
-              "duration": 256643
+              "duration": 163149
             },
             "line": 11,
             "match": {
-              "location": "/Users/varun/Documents/proj/iot-interworking-project/step-definitions/login.js:36"
+              "location": "/Users/varun/Documents/proj/iot-interworking-project/step-definitions/login.js:38"
             }
           },
           {
@@ -64,8 +64,8 @@
             "keyword": "After ",
             "result": {
               "status": "failed",
-              "duration": 15001598918,
-              "error_message": "function timed out after 15000 milliseconds"
+              "duration": 3963248261,
+              "error_message": "ElementNotVisibleError: element not interactable\n  (Session info: chrome=75.0.3770.80)\n  (Driver info: chromedriver=2.46.628411 (3324f4c8be9ff2f70a05a30ebc72ffb013e1a71e),platform=Mac OS X 10.13.6 x86_64)\n    at Object.checkLegacyResponse (/Users/varun/Documents/proj/iot-interworking-project/node_modules/selenium-cucumber-js/node_modules/selenium-webdriver/lib/error.js:529:15)\n    at parseHttpResponse (/Users/varun/Documents/proj/iot-interworking-project/node_modules/selenium-cucumber-js/node_modules/selenium-webdriver/lib/http.js:509:13)\n    at /Users/varun/Documents/proj/iot-interworking-project/node_modules/selenium-cucumber-js/node_modules/selenium-webdriver/lib/http.js:441:30\n    at processTicksAndRejections (internal/process/task_queues.js:89:5)\nFrom: Task: WebElement.click()\n    at thenableWebDriverProxy.schedule (/Users/varun/Documents/proj/iot-interworking-project/node_modules/selenium-cucumber-js/node_modules/selenium-webdriver/lib/webdriver.js:807:17)\n    at WebElementPromise.schedule_ (/Users/varun/Documents/proj/iot-interworking-project/node_modules/selenium-cucumber-js/node_modules/selenium-webdriver/lib/webdriver.js:2015:25)\n    at WebElementPromise.click (/Users/varun/Documents/proj/iot-interworking-project/node_modules/selenium-cucumber-js/node_modules/selenium-webdriver/lib/webdriver.js:2096:17)\n    at createWorld.<anonymous> (/Users/varun/Documents/proj/iot-interworking-project/step-definitions/login.js:22:53)\n    at processTicksAndRejections (internal/process/task_queues.js:82:9)"
             },
             "hidden": true,
             "match": {
@@ -93,7 +93,7 @@
             "name": "User is on the IoT WebApp",
             "result": {
               "status": "passed",
-              "duration": 98990
+              "duration": 97388
             },
             "line": 6,
             "match": {
@@ -106,11 +106,11 @@
             "name": "User logs in using an invalid email",
             "result": {
               "status": "passed",
-              "duration": 193805
+              "duration": 185929
             },
             "line": 14,
             "match": {
-              "location": "/Users/varun/Documents/proj/iot-interworking-project/step-definitions/login.js:23"
+              "location": "/Users/varun/Documents/proj/iot-interworking-project/step-definitions/login.js:25"
             }
           },
           {
@@ -119,11 +119,11 @@
             "name": "User logs in using an invalid password",
             "result": {
               "status": "passed",
-              "duration": 281354
+              "duration": 267225
             },
             "line": 15,
             "match": {
-              "location": "/Users/varun/Documents/proj/iot-interworking-project/step-definitions/login.js:29"
+              "location": "/Users/varun/Documents/proj/iot-interworking-project/step-definitions/login.js:31"
             }
           },
           {
@@ -132,20 +132,19 @@
             "name": "User remains on the login screen",
             "result": {
               "status": "passed",
-              "duration": 199381
+              "duration": 158248
             },
             "line": 16,
             "match": {
-              "location": "/Users/varun/Documents/proj/iot-interworking-project/step-definitions/login.js:42"
+              "location": "/Users/varun/Documents/proj/iot-interworking-project/step-definitions/login.js:43"
             }
           },
           {
             "arguments": [],
             "keyword": "After ",
             "result": {
-              "status": "failed",
-              "duration": 8175579308,
-              "error_message": "WebDriverError: invalid session id\n  (Driver info: chromedriver=2.46.628411 (3324f4c8be9ff2f70a05a30ebc72ffb013e1a71e),platform=Mac OS X 10.13.6 x86_64)\n    at Object.checkLegacyResponse (/Users/varun/Documents/proj/iot-interworking-project/node_modules/selenium-cucumber-js/node_modules/selenium-webdriver/lib/error.js:529:15)\n    at parseHttpResponse (/Users/varun/Documents/proj/iot-interworking-project/node_modules/selenium-cucumber-js/node_modules/selenium-webdriver/lib/http.js:509:13)\n    at /Users/varun/Documents/proj/iot-interworking-project/node_modules/selenium-cucumber-js/node_modules/selenium-webdriver/lib/http.js:441:30\n    at processTicksAndRejections (internal/process/task_queues.js:89:5)\nFrom: Task: WebDriver.close()\n    at thenableWebDriverProxy.schedule (/Users/varun/Documents/proj/iot-interworking-project/node_modules/selenium-cucumber-js/node_modules/selenium-webdriver/lib/webdriver.js:807:17)\n    at thenableWebDriverProxy.close (/Users/varun/Documents/proj/iot-interworking-project/node_modules/selenium-cucumber-js/node_modules/selenium-webdriver/lib/webdriver.js:982:17)\n    at closeBrowser (/Users/varun/Documents/proj/iot-interworking-project/node_modules/selenium-cucumber-js/runtime/world.js:173:19)\n    at teardownBrowser (/Users/varun/Documents/proj/iot-interworking-project/node_modules/selenium-cucumber-js/runtime/world.js:187:20)\n    at createWorld.<anonymous> (/Users/varun/Documents/proj/iot-interworking-project/node_modules/selenium-cucumber-js/runtime/world.js:265:16)"
+              "status": "passed",
+              "duration": 3902027334
             },
             "hidden": true,
             "match": {
