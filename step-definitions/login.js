@@ -36,7 +36,7 @@ module.exports = function () {
 
     this.Then(/^User is taken to the dashboard$/, function() {
 
-       // return driver.findElement(by.id('logout_button')).click();
+       //return driver.findElement(by.xpath("//div[@class="loggedin-div"]//div[@class="container"]//div[@id="logout_button"]")).click();
     });
 
     this.Then(/^User remains on the login screen$/, function() {
