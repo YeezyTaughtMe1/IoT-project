@@ -1,3 +1,4 @@
+const wait = require('timeunit');
 module.exports = function () {
 
 
@@ -17,7 +18,9 @@ module.exports = function () {
 
         driver.findElement(by.id('password_field')).sendKeys('password');
 
-        return driver.findElement(by.id('login_button')).click();
+        driver.findElement(by.id('login_button')).click();
+        
+
     });
 
     this.When(/^User logs in using an invalid email$/, function() {
@@ -30,13 +33,13 @@ module.exports = function () {
 
        driver.findElement(by.id('password_field')).sendKeys('kebabshop');
 
-       return driver.findElement(by.id('login_button')).click();
+        return driver.findElement(by.id('login_button')).click();
 
     });
 
     this.Then(/^User is taken to the dashboard$/, function() {
 
-       //return driver.findElement(by.xpath("//div[@class="loggedin-div"]//div[@class="container"]//div[@id="logout_button"]")).click();
+        //return driver.findElement(by.xpath("//*[@id='switchLEDOn']")).click();
     });
 
     this.Then(/^User remains on the login screen$/, function() {

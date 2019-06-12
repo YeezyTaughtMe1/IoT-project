@@ -25,7 +25,8 @@
     "morgan": "~1.9.1",
     "selenium-webdriver": "^4.0.0-alpha.1",
     "sinon": "^7.3.2",
-    "socket.io": "*"
+    "socket.io": "*",
+    "timeunit": "^1.1.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
