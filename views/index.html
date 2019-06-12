@@ -153,6 +153,16 @@
         </div>
       </div>
     </section>
+    <section class="bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>Some Stats</h2>
+            <div id="chart_div"></div>
+          </div>
+        </div>
+      </div>
+    </section>
   
     <!-- Footer -->
     <footer class="py-5 bg-dark">
@@ -204,7 +214,38 @@
       createModel('Motion_Sensor');
     });
   </script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load('current', {packages: ['corechart', 'bar']});
+    google.charts.setOnLoadCallback(drawBasic);
 
+    function drawBasic() {
+
+      var data = google.visualization.arrayToDataTable([
+        ['Sensor Type', 'Usage over time',],
+        ['Motion Decenter', 15],
+        ['LED', 60],
+        ['Range Sensor', 6],
+
+      ]);
+
+      var options = {
+        title: 'How much have our sensors been used?',
+        chartArea: {width: '50%'},
+        hAxis: {
+          title: 'Usage count',
+          minValue: 0
+        },
+        vAxis: {
+          title: 'Sensors'
+        }
+      };
+
+      var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+
+      chart.draw(data, options);
+    }
+  </script>
 
 </body>
 

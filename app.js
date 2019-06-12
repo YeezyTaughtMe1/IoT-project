@@ -46,9 +46,9 @@ app.use('/sensor', (req, res) => {
         })
 });
 
-app.use(function(req, res, next) {
-    next(createError(404));
-  });
-  
+// app.use(function(req, res, next) {
+//     res(createError(404));
+//   });
+//
 
 module.exports = app;
