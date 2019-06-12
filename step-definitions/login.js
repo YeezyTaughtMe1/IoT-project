@@ -7,7 +7,7 @@ module.exports = function () {
         
       });
 
-    this.Then(/^User logs in using an valid email$/, function() {
+    this.When(/^User logs in using an valid email$/, function() {
 
          return driver.findElement(by.id('email_field')).sendKeys('henrydinh@uts.edu.au');
         
@@ -15,12 +15,12 @@ module.exports = function () {
 
     this.Then(/^User logs in using an valid password$/, function() {
 
-        return driver.findElement(by.id('password_field')).sendKeys('password');
+        driver.findElement(by.id('password_field')).sendKeys('password');
 
         return driver.findElement(by.id('login_button')).click();
     });
 
-    this.Then(/^User logs in using an invalid email$/, function() {
+    this.When(/^User logs in using an invalid email$/, function() {
 
         return driver.findElement(by.id('email_field')).sendKeys('georges@uts.edu.au');
         
