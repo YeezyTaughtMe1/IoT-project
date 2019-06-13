@@ -208,10 +208,23 @@
     $("#switchLEDOn").change(function () {
       socket.emit("LEDStateChanged", this.checked);
       createModel('LED');
+      drawBasic('LED');
     });
     $("#switchMotionOn").change(function () {
       socket.emit("motionStateChanged", this.checked);
       createModel('Motion_Sensor');
+      drawBasic('motion');
+    });
+    $("#submit_button").click(function () {
+      var num = $('#numberEntered').value;
+      socket.emit("DigitDisActivated", this.checked);
+      createModel('Digit_Display_' + num);
+      drawBasic('digit');
+    });
+    $("#switchRangeOn").change(function () {
+      socket.emit("RangeStateChanged", this.checked);
+      createModel('Range_Sensor');
+      drawBasic('range');
     });
   </script>
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -219,19 +232,34 @@
     google.charts.load('current', {packages: ['corechart', 'bar']});
     google.charts.setOnLoadCallback(drawBasic);
 
-    function drawBasic() {
-
+    function drawBasic(sens) {
+      var mI = 0;
+      var lI = 0;
+      var ranI = 0;
+      var diI = 0;
+      if (sens === 'motion') {
+        mI++;
+      }
+      else if (sens === 'LED') {
+        lI++;
+      }
+      else if (sens === 'digit') {
+        diI++;
+      } else {
+        ranI++;
+      }
       var data = google.visualization.arrayToDataTable([
-        ['Sensor Type', 'Usage over time',],
-        ['Motion Decenter', 15],
-        ['LED', 60],
-        ['Range Sensor', 6],
+        ['Sensor Type', 'Interactions',],
+        ['Motion Decenter', 15 + mI],
+        ['LED', 50 + lI],
+        ['Range Sensor', 6 + ranI],
+        ['Digit Display', 4 + diI],
 
       ]);
 
       var options = {
         title: 'How much have our sensors been used?',
-        chartArea: {width: '50%'},
+        chartArea: {width: '60%'},
         hAxis: {
           title: 'Usage count',
           minValue: 0

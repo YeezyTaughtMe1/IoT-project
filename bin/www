@@ -17,8 +17,17 @@ io.on("connection", function(socket){
     console.log("State Changed: " + state);
     io.emit("LEDStateUpdate", state);
   });
-  socket.on("motionStateChanged", function(state){
+  socket.on("motionStateChanged", function(state, dist){
     console.log("State Changed: " + state);
     io.emit("motionStateUpdate", state);
+    console.log(dist);
+  });
+  socket.on("RangeStateChanged", function(state){
+    console.log("State Changed: " + state);
+    io.emit("RangeStateUpdate", state);
+  });
+  socket.on("DigitStateChanged", function(state){
+    console.log("State Changed: " + state);
+    io.emit("DigitStateUpdate", state);
   });
 });
