@@ -39,7 +39,7 @@ module.exports = function () {
 
     this.Then(/^User is taken to the dashboard$/, function() {
 
-        //return driver.findElement(by.xpath("//*[@id='switchLEDOn']")).click();
+        return driver.wait(until.elementsLocated(by.id("user_div")), 10000);
     });
 
     this.Then(/^User remains on the login screen$/, function() {
