@@ -30,4 +30,8 @@ io.on("connection", function(socket){
     console.log("State Changed: " + state);
     io.emit("DigitStateUpdate", state);
   });
+  socket.on("SegmentStateChanged", function(state){
+    console.log("State Changed: " + state);
+    io.emit("SegmentStateUpdate", state);
+  });
 });
