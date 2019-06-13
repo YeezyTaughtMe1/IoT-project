@@ -25,7 +25,7 @@
 <body id="#page-top">
 
   <div id="login_div" class="main-div">
-    <h3>31261 IoT Project App - Authorized Users Only</h3>
+    <h3>31261 Project - Login</h3>
     
     <input type="email" placeholder="Email..." id="email_field" class="mdl-textfield__input" />
     <input type="password" placeholder="Password..." id="password_field" class="mdl-textfield__input" />
@@ -212,6 +212,10 @@
     $("#switchMotionOn").change(function () {
       socket.emit("motionStateChanged", this.checked);
       createModel('Motion_Sensor');
+    });
+    $("#numberEntered").change(function () {
+      socket.emit("SegmentStateChanged", this.checked);
+      createModel('7_Segment_Display');
     });
   </script>
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
