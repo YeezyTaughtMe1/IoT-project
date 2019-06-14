@@ -1,7 +1,7 @@
-function createModel(sensorName) {
+function createModel(sensorName, status) {
     var data = ({
                 sensor: sensorName,
-                status: 'state is flipped',
+                status: 'state is ' + status,
                 cause: 'remotely controlled through cloud'
             });
     addData(data);

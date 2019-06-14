@@ -17,10 +17,9 @@ io.on("connection", function(socket){
     console.log("State Changed: " + state);
     io.emit("LEDStateUpdate", state);
   });
-  socket.on("motionStateChanged", function(state, dist){
+  socket.on("motionStateChanged", function(state){
     console.log("State Changed: " + state);
     io.emit("motionStateUpdate", state);
-    console.log(dist);
   });
   socket.on("RangeStateChanged", function(state){
     console.log("State Changed: " + state);
@@ -30,8 +29,8 @@ io.on("connection", function(socket){
     console.log("State Changed: " + state);
     io.emit("DigitStateUpdate", state);
   });
-  socket.on("SegmentStateChanged", function(state){
-    console.log("State Changed: " + state);
-    io.emit("SegmentStateUpdate", state);
+  socket.on("SegmentStateChanged", function(num){
+    console.log("State Changed: " + num);
+    io.emit("SegmentStateUpdate", num);
   });
 });
