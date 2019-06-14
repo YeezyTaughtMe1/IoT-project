@@ -232,7 +232,7 @@
       drawBasic('range');
     });
     $("#numberEntered").change(function () {
-      socket.emit("SegmentStateChanged", this.value);
+      socket.emit("SegmentStateChanged", this.checked);
       createModel('7_Segment_Display');
     });
   </script>
