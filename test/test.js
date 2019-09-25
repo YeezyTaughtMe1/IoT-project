@@ -95,15 +95,6 @@ MongoClient.connect(url, function (err, db) {
 
 
 
-
-  //before(function(done) {
-   // mongoose.disconnect(function() {
-   // mongoose.connect('mongodb://heroku_rkk9fh3h:9ni9okpduof7mnqmfndv242cok@ds135456.mlab.com:35456/heroku_rkk9fh3h');
-   //   done(); 
-   //});
-   //});
-    
-
 describe('Mongoose Connect', function() {
   it('Would pass if mongoose is connected to right URL', function(){
   assert.equal(dbUrl, 'mongodb://heroku_rkk9fh3h:9ni9okpduof7mnqmfndv242cok@ds135456.mlab.com:35456/heroku_rkk9fh3h');

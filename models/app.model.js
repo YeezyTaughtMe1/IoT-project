@@ -1,5 +1,5 @@
 let mongoose = require('mongoose');
-
+//database model and connection
 var dbUrl = "mongodb://heroku_rkk9fh3h:9ni9okpduof7mnqmfndv242cok@ds135456.mlab.com:35456/heroku_rkk9fh3h";
 
 const server = 'ds135456.mlab.com:35456';

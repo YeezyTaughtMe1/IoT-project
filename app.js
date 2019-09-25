@@ -3,13 +3,12 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
-var createError = require('http-errors');
 
 let Sensor = require('./models/app.model');
 
 var app = express();
 
-// view engine setup was set inplace of use
+// view engine setup
 app.use((bodyParser.json()));
 
 app.set('views', path.join(__dirname, 'views'));
@@ -22,12 +21,11 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-
-// app.use('/', indexRouter);
+//serve index page
 app.get('/', function(req, res, next) {
     res.render('index');
 });
-// app.use('/sensor', sensorRouter);
+//database route
 app.use('/sensor', (req, res) => {
     if (!req.body){
         return res.status(400).send('Request body is missing');
@@ -45,10 +43,5 @@ app.use('/sensor', (req, res) => {
             console.log(err);
         })
 });
-
-// app.use(function(req, res, next) {
-//     res(createError(404));
-//   });
-//
 
 module.exports = app;
