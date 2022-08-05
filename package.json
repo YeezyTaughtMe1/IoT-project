@@ -21,7 +21,7 @@
     "junit": "^1.4.9",
     "mocha": "^6.1.4",
     "mongodb": "^3.2.4",
-    "mongoose": "^5.5.9",
+    "mongoose": "^5.7.5",
     "morgan": "~1.9.1",
     "selenium-webdriver": "^4.0.0-alpha.1",
     "sinon": "^7.3.2",
